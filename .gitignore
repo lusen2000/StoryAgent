@@ -1,0 +1,42 @@
+# StoryBoard Agent — 最小仓库忽略规则
+# 保留：*.py、stories/*.txt、requirements.txt、run.bat、README.md、tools/*.py
+
+# 虚拟环境（本地按需创建，不入仓）
+.venv/
+.venv-*/
+venv/
+env/
+
+# Python / 测试缓存
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# 下载缓存与临时文件
+.cache/
+*.tmp
+*.bak
+*.swp
+
+# 大体积资源：模型权重与私有 vendor 不入库
+# 用 tools/fetch_model*.py、tools/convert_bf16.py、tools/bootstrap_diffusers.py 按需重建
+models/
+vendor/
+
+# 运行产物（每次运行独立目录）
+output/
+*.log
+
+# IDE / 编辑器
+.idea/
+.vscode/
+*.iml
+
+# 操作系统
+.DS_Store
+Thumbs.db
+desktop.ini

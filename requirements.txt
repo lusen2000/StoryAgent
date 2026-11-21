@@ -1,0 +1,14 @@
+# 最小依赖：rule 分镜 + mock 渲染，纯 CPU，无需 GPU / 模型 / 网络
+numpy>=1.24
+Pillow>=10
+
+# 可选增强（需要时取消注释）
+# opencv-python>=4.8      # 更准确的 HSV 直方图 / Laplacian 锐度；不装也有 numpy 回退
+# requests>=2.28          # 云侧图像/VLM 接口、ModelScope 下载脚本
+
+# 真实 Z-Image 本地生成（RTX 5060 Ti 需 CUDA >= 12.8，见 README）
+# torch>=2.7.0+cu128
+# diffusers==0.36.0       # 建议用 tools/bootstrap_diffusers.py 放入私有 vendor/
+# transformers>=4.57.6
+# accelerate>=1.0
+# safetensors>=0.4
