@@ -15,6 +15,16 @@
 
 ---
 
+## 效果展示
+
+《草船借箭》分镜预览长图（每镜按"描述 + 画面 + 标题"排列，来自真实运行结果）：
+
+![草船借箭分镜预览](assets/preview_caochuan.png)
+
+> 完整产物见 `output/caochuan_20261118_222916/`（该目录不入库，图片已另存到 `assets/` 供展示）。
+
+---
+
 ## 1. 最小可运行：rule + mock
 
 这条路径**不需要 GPU、不需要模型权重、不需要 LLM、不需要网络**，只需要 Python + `numpy` + `Pillow`。
@@ -225,7 +235,10 @@ python main.py --story chensheng --backend cloud --script-mode llm
 ```text
 main.py  config.py  story_agent/  stories/*.txt  tools/*.py
 requirements.txt  README.md  .gitignore  run.bat
+assets/preview_caochuan.png     # README 效果展示图
 ```
+
+> 注意：虽然 `.gitignore` 忽略了整个 `output/`，但 `assets/` 不在忽略规则内，因此展示图可以正常入库。
 
 忽略：
 
